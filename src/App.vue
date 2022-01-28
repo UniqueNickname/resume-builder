@@ -1,15 +1,6 @@
 <template>
-<!-- <div class="bg-gray-300 py-10"> -->
-  <!-- <button class="absolute top-4 left-4" @click.prevent="createPDF">
-    Create
-  </button> -->
   <div id="core" class="base-container mx-auto bg-white grid grid-cols-4 gap-5 text-lg">
-    <!-- <div class="col-span-3 h-[400px]"> -->
     <div class="col-span-4 h-[0px]">
-      <!-- <div class="flex items-center justify-center h-[360px]">
-        <div class="mt-4 overflow-hidden w-[300px] h-[300px] bg-[url(photo.jpg)] rounded-lg" style="background-position: 25% 12%; background-size: 222%;" />
-      </div> -->
-      <!-- <div class="text-center block h-8"> -->
       <div class="text-center block h-8 mt-4">
         <h1 class="uppercase font-bold text-2xl">Кочура Иван Александрович</h1>
       </div>
@@ -22,9 +13,6 @@
       </div>
     </div>
     <div class="col-span-1 text-center space-y-10 -mt-32">
-      <!-- <div class="flex items-center justify-center h-[360px]">
-        <div class="mt-4 overflow-hidden w-[300px] h-[300px] bg-[url(photo.jpg)] rounded-lg" style="background-position: 25% 12%; background-size: 222%;" />
-      </div> -->
       <div class="flex items-center justify-center h-[360px] pr-2 pl-4">
         <img :src="photo" alt="">
       </div>
@@ -93,7 +81,6 @@
       </div>
     </div>
   </div>
-<!-- </div> -->
 </template>
 
 <script setup lang="ts">
