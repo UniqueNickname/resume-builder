@@ -1,5 +1,8 @@
 <template>
 <div class="bg-gray-300 py-10">
+  <button class="absolute top-4 left-4" @click.prevent="createPDF">
+    Create
+  </button>
   <div class="base-container mx-auto bg-white grid grid-cols-3 gap-5">
     <div class="col-span-3 h-[416px]">
       <div class="flex items-center justify-center h-[360px]">
@@ -94,6 +97,8 @@ import Information from 'vue-material-design-icons/Information.vue'
 import LeftBlock from './components/left-block.vue'
 import WorkList from './components/work-list.vue'
 import NamedList from './components/named-list.vue'
+
+const createPDF = () => {}
 
 const contacts = [
   '+79136745378',
