@@ -3,7 +3,7 @@
 	<p class="pr-24">
 		{{ title }}:
 	</p>
-	<ul class="space-y-1">
+	<ul class="space-y-1 pr-20">
 		<li v-for="(task, index) in options" :key="index">
 		<span>
 			- {{ task }}

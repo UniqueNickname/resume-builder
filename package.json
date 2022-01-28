@@ -4,9 +4,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "pdf": "html2image -a http://localhost:3000/ -f pdf -o C:/Users/unique/Desktop"
   },
   "dependencies": {
+    "html2canvas": "^1.4.1",
+    "html2image": "^2.0.0",
+    "jspdf": "^2.5.0",
     "vue": "^3.2.25",
     "vue-material-design-icons": "^5.0.0"
   },

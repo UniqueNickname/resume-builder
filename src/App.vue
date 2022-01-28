@@ -1,14 +1,16 @@
 <template>
-<div class="bg-gray-300 py-10">
-  <button class="absolute top-4 left-4" @click.prevent="createPDF">
+<!-- <div class="bg-gray-300 py-10"> -->
+  <!-- <button class="absolute top-4 left-4" @click.prevent="createPDF">
     Create
-  </button>
-  <div class="base-container mx-auto bg-white grid grid-cols-3 gap-5">
-    <div class="col-span-3 h-[416px]">
-      <div class="flex items-center justify-center h-[360px]">
+  </button> -->
+  <div id="core" class="base-container mx-auto bg-white grid grid-cols-4 gap-5 text-lg">
+    <!-- <div class="col-span-3 h-[400px]"> -->
+    <div class="col-span-4 h-[0px]">
+      <!-- <div class="flex items-center justify-center h-[360px]">
         <div class="mt-4 overflow-hidden w-[300px] h-[300px] bg-[url(photo.jpg)] rounded-lg" style="background-position: 25% 12%; background-size: 222%;" />
-      </div>
-      <div class="text-center block h-8">
+      </div> -->
+      <!-- <div class="text-center block h-8"> -->
+      <div class="text-center block h-8 mt-4">
         <h1 class="uppercase font-bold text-2xl">Кочура Иван Александрович</h1>
       </div>
       <div class="flex items-center justify-center mx-auto">
@@ -19,11 +21,17 @@
         </div>
       </div>
     </div>
-    <div class="col-span-1 text-center space-y-10">
+    <div class="col-span-1 text-center space-y-10 -mt-32">
+      <!-- <div class="flex items-center justify-center h-[360px]">
+        <div class="mt-4 overflow-hidden w-[300px] h-[300px] bg-[url(photo.jpg)] rounded-lg" style="background-position: 25% 12%; background-size: 222%;" />
+      </div> -->
+      <div class="flex items-center justify-center h-[360px] pr-2 pl-4">
+        <img :src="photo" alt="">
+      </div>
       <left-block title="Контакты" :options="contacts" />
       <left-block title="Навыки" :options="skills" />
     </div>
-    <div class="col-span-2 space-y-4">
+    <div class="col-span-3 space-y-4 -mt-28">
       <div class="">
         <div class="flex items-center justify-start space-x-4">
           <account />
@@ -44,7 +52,7 @@
             <p class="text-opacity-50 text-black">Спички</p>
             <small class="text-opacity-50 text-black">март 2021 - ноябрь 2021</small>
             <div class="pl-4 space-y-4">
-              <p class="pr-24">
+              <p class="pr-20">
                 Спички - стартап по генерации озвучки для статей. Работал
                 на проекте Retell.cc. Владельцы новостных сайтов подключают
                 их к нашей системе, наш сервер парсит RSS и генерирует озвучку.
@@ -52,7 +60,7 @@
                 скрипты, которые добавят плеер. Плеер служит для воспроизведения
                 сгенерированных статей и сбора статистики.
               </p>
-              <work-list title="Весь front-end разрабатывается лично мной" :options="tasksSpeechki" />
+              <work-list title="Весь front-end разрабатывался лично мной" :options="tasksSpeechki" />
             </div>
           </div>
           <div>
@@ -85,7 +93,7 @@
       </div>
     </div>
   </div>
-</div>
+<!-- </div> -->
 </template>
 
 <script setup lang="ts">
@@ -97,13 +105,12 @@ import Information from 'vue-material-design-icons/Information.vue'
 import LeftBlock from './components/left-block.vue'
 import WorkList from './components/work-list.vue'
 import NamedList from './components/named-list.vue'
-
-const createPDF = () => {}
+import photo from './assets/img/photo2.png'
 
 const contacts = [
   '+79136745378',
   'dr.art-47@yandex.ru',
-  'https://github.com/UniqueNickname/'
+  'https://github.com/ UniqueNickname/'
 ]
 
 const skills = [
