@@ -1,8 +1,8 @@
 <template>
 <div class="bg-gray-300 py-10">
   <div class="base-container mx-auto bg-white grid grid-cols-3 gap-5">
-    <div class="col-span-3 h-[456px]">
-      <div class="flex items-center justify-center h-[400px]">
+    <div class="col-span-3 h-[416px]">
+      <div class="flex items-center justify-center h-[360px]">
         <div class="mt-4 overflow-hidden w-[300px] h-[300px] bg-[url(photo.jpg)] rounded-lg" style="background-position: 25% 12%; background-size: 222%;" />
       </div>
       <div class="text-center block h-8">
@@ -27,12 +27,7 @@
           <h2 class="uppercase font-bold">Личная информация</h2>
         </div>
         <div class="border-l-2 border-gray-500 pl-6 ml-[7px] mt-2">
-          <ul class="space-y-2">
-            <li v-for="[key, value] in Object.entries(personal)" :key="key">
-              <span class="text-opacity-50 text-black mr-2">{{ key }}:</span>
-              <span>{{ value }}</span>
-            </li>
-          </ul>
+          <named-list :options="personal" />
         </div>
       </div>
       <div class="">
@@ -70,6 +65,21 @@
           </div>
         </div>
       </div>
+      <div class="flex items-center justify-start space-x-4">
+        <school />
+        <h2 class="uppercase font-bold">Образование</h2>
+      </div>
+      <div class="border-l-2 border-gray-500 pl-6 ml-[7px] mt-2 space-y-4">
+        <h3 class="font-bold">Омский государственный университет</h3>
+        <named-list :options="university" />
+      </div>
+      <div class="flex items-center justify-start space-x-4">
+        <information />
+        <h2 class="uppercase font-bold">Дополнительная информация</h2>
+      </div>
+      <div class="border-l-2 border-gray-500 pl-6 ml-[7px] mt-2 space-y-4">
+        <named-list :options="about" />
+      </div>
     </div>
   </div>
 </div>
@@ -79,8 +89,11 @@
 import MapMarker from 'vue-material-design-icons/MapMarker.vue'
 import Account from 'vue-material-design-icons/Account.vue'
 import Briefcase from 'vue-material-design-icons/Briefcase.vue'
+import School from 'vue-material-design-icons/School.vue'
+import Information from 'vue-material-design-icons/Information.vue'
 import LeftBlock from './components/left-block.vue'
 import WorkList from './components/work-list.vue'
+import NamedList from './components/named-list.vue'
 
 const contacts = [
   '+79136745378',
@@ -119,6 +132,21 @@ const tasksKvark = [
   'разработка пользовательского интерфейса в команде',
   'внесение исправлений в проекты, на которых ранее не работал (меня перекидывали на чужие проекты починить баги и нужно было крайне быстро освоиться на незнакомом проекте)',
 ]
+
+const university = {
+  'Факультет': 'Информационных технологий и компьютерных систем (ФИТиКС)',
+  'Специальность': 'Информационные системы и технологии (ИСТ)',
+}
+
+const about = {
+  'Занятия в свободное время': 'Фитнес, видеоигры',
+  'Личные качества': [
+    'Отсутствие вредных привычек',
+    'Самостоятельность - т.к. весь front-end на мне, многие решения принимались лично мной',
+    'Инициативность - предлагал множество решений по улучшению UI и UX',
+    'Быстрая обучаемость - часто приходилось переключаться между технологиями. Уже поработал и с vue 3, писал плагин для webpack с поддержкой v4 и v5, быстро изучил svelte, писал библиотеки для npm, плагины для vue и react'
+  ],
+}
 </script>
 
 <style lang="scss">
