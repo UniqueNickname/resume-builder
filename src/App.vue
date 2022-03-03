@@ -89,7 +89,7 @@
           </div>
         </div>
       </div>
-      <div class="flex items-center justify-start space-x-4">
+      <div class="flex items-center justify-start space-x-4" style="margin-top: 120px;">
         <school />
         <h2 class="font-bold uppercase">Образование</h2>
       </div>
