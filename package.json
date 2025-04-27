@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "pdf": "html2image -a http://localhost:3000/ -f pdf -o C:/Users/unique/Desktop"
+    "pdf": "html2image -a http://localhost:3000/ -f pdf -o ./"
   },
   "dependencies": {
     "html2image": "^2.0.0",
